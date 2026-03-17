@@ -33,7 +33,7 @@ def run():
             continue
 
         parts = user_input.split(maxsplit=1)
-        command = parts[0].lower()
+       command = parts[0].strip().lower()
 
         if command == "quit":
             print("Goodbye!")
