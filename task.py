@@ -23,7 +23,7 @@ def list_tasks():
         return
 
     print("\n--- Your Tasks ---")
-    for task in tasks:
+    for task in sorted(tasks, key=lambda x: x["id"]):
         status = "✅" if task["done"] else "⬜"
         print(f"  [{task['id']}] {status}  {task['title']}")
     print()
