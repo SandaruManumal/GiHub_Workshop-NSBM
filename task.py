@@ -5,7 +5,7 @@ def add_task(title):
     """Add a new task to the list."""
     tasks = load_tasks()
     task = {
-        "id": len(tasks) + 1,
+        "id": max([t["id"] for t in tasks], default=0) + 1,
         "title": title,
         "done": False
     }
